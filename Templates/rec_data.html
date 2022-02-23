@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Details</title>
+  <h3>Student Details</h3>
+</head>
+<body>
+
+  <p>First name is :{{First_name}}</p>
+  <p>Last name is: {{Last_name}}</p>
+  <p>Roll number is: {{Roll_number}}</p>
+  <p>Class is: {{Class}}</p>
+  <p>Section is: {{Section}}</p>
+  <p>College is: {{College}}</p>
+
+<form action="/all" method="post" target="_blank">
+     {% csrf_token %}
+{% for Student in fulldata.all%}
+ <p>First name is :{{First_name}}</p>
+  <p>Last name is: {{Last_name}}</p>
+  <p>Roll number is: {{Roll_number}}</p>
+  <p>Class is: {{Class}}</p>
+  <p>Section is: {{Section}}</p>
+  <p>College is: {{College}}</p>
+
+{% endfor %}
+</form>
+</body>
+</html>

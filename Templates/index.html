@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>  Details  </title>
+</head>
+<body>
+<h2> <center> Student Details </center></h2>
+
+<form action="/rec_data" method="post" target="_blank">
+     {% csrf_token %}
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname" value=""><br>
+
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname" value=""><br><br>
+
+<label for="Rnum">Roll number:</label><br>
+<input type="text" id="Rnum" name="Rnum" value=""><br><br>
+
+<label for="cls">Class:</label><br>
+<input type="text" id="cls" name="cls" value=""><br><br>
+
+<label for="sec">Section:</label><br>
+<input type="text" id="sec" name="sec" value=""><br><br>
+
+<label for="clg">College:</label><br>
+<input type="text" id="clg" name="clg" value=""><br><br>
+
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
