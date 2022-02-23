@@ -20,7 +20,7 @@ def rec_data(request):
     return render(request,'rec_data.html',context=dicta)
 def all(request):
     fulldata = Student.objects.all()
-    print(fulldata)
+   # print(fulldata)
 
     return render(request,'rec_data.html',{'fulldata' : fulldata})
 
