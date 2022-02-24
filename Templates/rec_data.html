@@ -9,24 +9,19 @@
 </head>
 <body>
 
-  <p>First name is :{{First_name}}</p>
-  <p>Last name is: {{Last_name}}</p>
-  <p>Roll number is: {{Roll_number}}</p>
-  <p>Class is: {{Class}}</p>
-  <p>Section is: {{Section}}</p>
-  <p>College is: {{College}}</p>
 
-<form action="/all" method="post" target="_blank">
-     {% csrf_token %}
-{% for Student in fulldata.all%}
- <p>First name is :{{First_name}}</p>
-  <p>Last name is: {{Last_name}}</p>
-  <p>Roll number is: {{Roll_number}}</p>
-  <p>Class is: {{Class}}</p>
-  <p>Section is: {{Section}}</p>
-  <p>College is: {{College}}</p>
+
+
+
+{% for student in all_students %}
+ <p>First name is :{{student.Firstname}}</p>
+  <p>Last name is: {{student.Lastname}}</p>
+  <p>Roll number is: {{student.RollNumber}}</p>
+  <p>Class is: {{student.Class}}</p>
+  <p>Section is: {{student.Section}}</p>
+  <p>College is: {{student.College}}</p>
 
 {% endfor %}
-</form>
+
 </body>
 </html>
